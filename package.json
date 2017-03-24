@@ -1,5 +1,5 @@
 {
-  "name": "mentalhealth.az",
+  "name": "webpack-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "",
@@ -7,13 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/rufat_khaslarov/mentalhealth.az.git"
-  },
   "author": "Rufat Khaslarov",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/rufat_khaslarov/mentalhealth.az#readme",
+  "homepage": "https://github.com/rkhaslarov/webpack-boilerplate",
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.23.0",
     "bootstrap": "^3.3.7",
