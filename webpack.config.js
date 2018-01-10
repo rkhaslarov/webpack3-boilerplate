@@ -4,9 +4,9 @@ var path = require('path');
 
 module.exports = {
     context: __dirname + "/app",
-    entry: "./source/app.js",
+    entry: "./src/app.js",
     output: {
-        path: __dirname + "/app/build",
+        path: __dirname + "/app/dist",
         filename: "bundle.js",
         publicPath: 'assets/'
     },
@@ -31,13 +31,13 @@ module.exports = {
             jQuery:"jquery"
         }),
         new ExtractTextPlugin('bundle.css'),
-        // new webpack.HotModuleReplacementPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         contentBase: 'app',
         port: 9000,
-        // hot: true,
-        watchContentBase: true,
+        hot: true,
+        watchContentBase: true
         // inline: true
     },
 }
