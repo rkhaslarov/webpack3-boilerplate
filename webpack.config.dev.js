@@ -20,13 +20,13 @@ module.exports = {
     watch: true,
     module: {
         rules: [
-            { test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'}) },
+            { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
             { test: /\.(woff|woff2)$/, loader:"url-loader?prefix=font/&limit=50000" },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=application/octet-stream" },
             { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" },
             { test: /\.(png|jpg)$/, exclude: /node_modules/, loader: "url-loader" },
-            { test: /\.less$/, loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: ['css-loader', 'less-loader']})},
+            { test: /\.less$/, loaders: ['style-loader', 'css-loader', 'less-loader']},
             { test: /\.js$/, exclude: /(node_modules)/, loader: 'babel-loader'}
         ]
     },
@@ -37,7 +37,6 @@ module.exports = {
             "window.jQuery": "jquery",
             jQuery:"jquery"
         }),
-        new ExtractTextPlugin('bundle.css'),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
@@ -47,7 +46,7 @@ module.exports = {
         contentBase: 'app',
         port: 9000,
         hot: true,
-        watchContentBase: true
+        watchContentBase: true,
         inline: true
     },
 }
