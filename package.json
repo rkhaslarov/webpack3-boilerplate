@@ -4,29 +4,30 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack",
+    "start": "cross-env NODE_ENV=development node_modules/.bin/webpack-dev-server"
   },
   "author": "Rufat Khaslarov",
   "license": "MIT",
   "homepage": "https://github.com/rkhaslarov/webpack-boilerplate",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1"
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
-    "file-loader": "^0.10.0",
-    "less": "^2.7.2",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.26.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
   }
 }
